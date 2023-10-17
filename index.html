@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/carousel.css" />
+
+    <script
+      src="https://kit.fontawesome.com/392acbfbb6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Kattsidan</title>
+  </head>
+  <body>
+    <div id="blurBg"></div>
+    <header>
+      <div class="headerContent">
+        <h1 class="pageTitle" id="pageTitle">
+          <a id="pageTitle" class="logoLink translate" href="/">Kattsidan</a>
+        </h1>
+        <nav>
+          <!--desktop navigation menu-->
+          <ul class="navMenu">
+            <li>
+              <a id="startLink" class="navMenuLink translate" href="/">Start</a>
+            </li>
+            <li>
+              <a id="catsLink" class="navMenuLink translate" href="/">Katter</a>
+            </li>
+            <li>
+              <a id="aboutLink" class="navMenuLink translate" href="/"
+                >Om oss</a
+              >
+            </li>
+            <li>
+              <a id="contactLink" class="navMenuLink translate" href="/"
+                >Kontakt</a
+              >
+              <span class="screenReadersOnly">Kontakt länk</span>
+            </li>
+          </ul>
+          <!--mobile navigation menu-->
+          <button
+            id="openNavBtn"
+            type="button"
+            title="open nav-menu"
+            class="openNavBtn"
+          >
+            <span> <i class="fa-solid fa-bars"></i></span>
+          </button>
+
+          <div class="openNavMenu" id="openNavMenu">
+            <div class="closeBtnContainer">
+              <button type="button" title="close nav btn" id="closeNavBtn">
+                X
+              </button>
+            </div>
+
+            <ul class="mobMenu">
+              <li class="listItem">
+                <a class="mobMenuLink translate" id="startLink" href="/"
+                  >Start</a
+                >
+                <span class="screenReadersOnly">Start länk</span>
+              </li>
+              <li class="listItem">
+                <a class="mobMenuLink translate" href="/" id="catsLink"
+                  >Katter</a
+                >
+                <span class="screenReadersOnly">Katter länk</span>
+              </li>
+              <li class="listItem">
+                <a class="mobMenuLink translate" href="/" id="aboutLink"
+                  >Om oss
+                </a>
+                <span class="screenReadersOnly">Om oss länk</span>
+              </li>
+              <li class="listItem">
+                <a class="mobMenuLink translate" href="/" id="contactLink"
+                  >Kontakt
+                </a>
+                <span class="screenReadersOnly">Kontakt länk</span>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="languageSelector">
+          <button
+            class="languageBtn"
+            id="toggleLanguage"
+            onclick="toggleLanguage()"
+          >
+            <i class="world fa-solid fa-globe"></i>
+            <span class="lng" translate="" id="transLang">SV / EN</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="section sectionOne">
+          <div class="sectionOneText">
+            <h2 class="sectionOneTitle translate" id="sectionOneTitle">
+              Välkommen till vår kattsida
+            </h2>
+            <p class="translate" id="sectionOneFirstText">
+              Här kan du upptäcka spännande fakta om katter och deras beteende.
+              Utforska våra artiklar och bilder och lär dig mer om dessa
+              underbara varelser.
+            </p>
+            <p class="translate" id="sectionOneSecondText">
+              Om du älskar katter lika mycket som vi gör, varför inte gå med i
+              vår kattklubb? Klicka på knappen nedan för att bli medlem!
+            </p>
+            <button
+              class="button translate"
+              id="memberBtn"
+              type="button"
+              title="bli medlem"
+            >
+              Bli medlem
+            </button>
+          </div>
+          <img class="sectionOneImg" src="images/1.webp" alt="Katt 1" />
+        </div>
+        <div class="section sectionTwo">
+          <div class="sectionTwoText">
+            <h2 class="sectionTwoTitle translate" id="sectionTwoTitle">
+              Våra Katter
+            </h2>
+            <p class="translate" id="sectionTwoFirstText">
+              Här kan du läsa om några av våra underbara katter och deras
+              personligheter. Kolla in bilder på dem nedan.
+            </p>
+          </div>
+          <section class="sectionTwoImg" aria-label="Newest Photos">
+            <div class="carousel" data-carousel>
+              <button
+                type="button"
+                title="prev slide"
+                data-carousel-btn="prev"
+                class="carouselBtn prev"
+              >
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button
+                type="button"
+                title="next slide"
+                data-carousel-btn="next"
+                class="carouselBtn next"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+              <ul data-slides>
+                <li class="slide" data-active>
+                  <img src="images/2.jpeg" alt="Cat Boris" />
+                  <div class="tooltip">
+                    <span class="tooltipText">Bosse, 4 år, Scottish fold</span>
+                  </div>
+                </li>
+                <li class="slide">
+                  <img src="images/3.webp" alt="Cat Gustav" />
+                  <div class="tooltip">
+                    <span class="tooltipText">Gustav, 2 år, Bondkatt</span>
+                  </div>
+                </li>
+                <li class="slide">
+                  <img src="images/4.webp" alt="Cat Dolly" />
+                  <div class="tooltip">
+                    <span class="tooltipText">Dolly, 8 mån, Bondkatt</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <div class="section sectionThree">
+          <h2 class="translate" id="sectionThreeTitle">Kattbilder</h2>
+          <p class="translate" id="sectionThreeFirstText">
+            Kolla in några söta kattbilder här. Du kan lägga till fler bilder
+            nedan.
+          </p>
+          <div class="catGrid" id="catGrid">
+            <img class="sectionThreeImg" src="images/3.webp" alt="Katt 3" />
+            <img class="sectionThreeImg" src="images/4.webp" alt="Katt 4" />
+            <img class="sectionThreeImg" src="images/5.webp" alt="Katt 5" />
+            <img class="sectionThreeImg" src="images/6.jpeg" alt="Katt 6" />
+            <img class="sectionThreeImg" src="images/7.jpeg" alt="Katt 7" />
+            <img class="sectionThreeImg" src="images/8.jpeg" alt="Katt 8" />
+          </div>
+          <div class="imageUpload">
+            <form class="imgForm" action="" id="imgUpload">
+              <label
+                class="label translate"
+                id="sectionThreeImgLabel"
+                for="file-upload-button"
+                >Ladda upp en bild:
+              </label>
+              <br />
+
+              <input
+                type="file"
+                accept="image/*"
+                name="myfile"
+                id="file-upload-button"
+              />
+              <br /><br />
+              <input
+                id="inputSubmitBtn"
+                type="submit"
+                onclick="handleImgUpload(event)"
+                value="Lägg till"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="section">
+          <h2 class="translate" id="sectionFourTitle">Om Oss</h2>
+          <p class="translate" id="sectionFourFirstText">
+            Lite information om vår kattklubb och vår kärlek till katter.
+          </p>
+          <p class="translate" id="sectionFourSecondText">
+            Vi är en grupp kattälskare som älskar att dela vår passion för
+            katter med andra. Vår kattklubb har funnits i flera år och vi är
+            engagerade i att hjälpa katter och främja kattvård.
+          </p>
+        </div>
+        <div class="section">
+          <h2 class="translate" id="sectionFiveTitle">Kontakt</h2>
+          <p class="translate" id="sectionFiveFirstText">
+            Kontakta oss om du har frågor eller förslag. Vi älskar att höra från
+            våra besökare.
+          </p>
+          <p class="translate" id="sectionFiveSecondText">
+            Du kan nå oss på följande e-postadress:
+            <a href="mailto:kontakt@kattsidan.se">kontakt@kattsidan.se</a>
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <span class="footerSpan"
+        >&copy; <span class="translate" id="copy"> 2023 Kattsidan</span></span
+      >
+    </footer>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/carousel.js" defer></script>
+  </body>
+</html>
